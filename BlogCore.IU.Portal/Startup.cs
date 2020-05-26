@@ -16,6 +16,7 @@ using BlogCore.AccesoDatos.Data.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using BlogCore.Utilidades;
 using BlogCore.Modelos;
+using BlogCore.AccesoDatos.Inicializador;
 
 namespace BlogCore.IU.Portal
 {
@@ -43,6 +44,7 @@ namespace BlogCore.IU.Portal
 
             //cambiarlo a libreria de Negocio
             services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
+            //services.AppScoped<IInicializador, Inicializador>();
             //Refrescar la IU
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
